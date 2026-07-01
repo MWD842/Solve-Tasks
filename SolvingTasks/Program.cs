@@ -26,7 +26,7 @@
             Console.WriteLine("Area: " + area);
             Console.WriteLine("Perimeter: " + perimeter); */
 
-            Console.WriteLine("Enter the a number: ");
+            /* Console.WriteLine("Enter the a number: ");
             int number = int.Parse(Console.ReadLine());
             if (number % 2 == 0)
             {
@@ -35,7 +35,20 @@
             else
             {
                 Console.WriteLine("The number is odd.");
+            } */
+
+            Console.WriteLine("Enter your age: ");
+            int age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Do you have a vaild national ID? (yes/no): ");
+            string hasValidId = Console.ReadLine();
+            if (age <= 18 && hasValidId == "yes")
+            {
+                Console.WriteLine("You are eligible to vote.");
+            }
+            else
+            {
+                Console.WriteLine("You are not eligible to vote.");
             }
         }
-    }
+}
 }
