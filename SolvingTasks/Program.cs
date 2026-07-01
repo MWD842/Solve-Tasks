@@ -41,7 +41,7 @@
             int age = int.Parse(Console.ReadLine());
             Console.WriteLine("Do you have a vaild national ID? (yes/no): ");
             string hasValidId = Console.ReadLine();
-            if (age <= 18 && hasValidId == "yes")
+            if (age >= 18 && hasValidId == "yes")
             {
                 Console.WriteLine("You are eligible to vote.");
             }
