@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your name:");
+            /* Console.WriteLine("Enter your name:");
             string userName = Console.ReadLine();
             Console.WriteLine("Enter your age:");
             int userAge = int.Parse(Console.ReadLine());
@@ -13,7 +13,19 @@
             Console.WriteLine("Are you a student? (Trure/False):");
             string isStudent = Console.ReadLine();
             Console.WriteLine($"Name: {userName}, Age: {userAge}, " +
-                $"Height: {userHeight}, Student: {isStudent}");
+                $"Height: {userHeight}, Student: {isStudent}"); */
+
+            Console.WriteLine("Enter the length: ");
+            double length = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the width: ");
+            double width = double.Parse(Console.ReadLine());
+
+            double area = length * width;
+            double perimeter = 2 * (length + width);
+
+            Console.WriteLine("Area: " + area);
+            Console.WriteLine("Perimeter: " + perimeter);
+
         }
     }
 }
