@@ -37,7 +37,7 @@
                 Console.WriteLine("The number is odd.");
             } */
 
-            Console.WriteLine("Enter your age: ");
+            /* Console.WriteLine("Enter your age: ");
             int age = int.Parse(Console.ReadLine());
             Console.WriteLine("Do you have a vaild national ID? (yes/no): ");
             string hasValidId = Console.ReadLine();
@@ -48,7 +48,38 @@
             else
             {
                 Console.WriteLine("You are not eligible to vote.");
+            } */
+
+            Console.WriteLine("Enter your grade: ");
+            char grade = char.Parse(Console.ReadLine());
+            switch (grade) {
+                case 'A':
+                case 'a':
+                    Console.WriteLine("Excellent!");
+                    break;
+                case 'B':
+                case 'b':
+                    Console.WriteLine("Very Good!");
+                    break;
+                case 'C':
+                case 'c':
+                    Console.WriteLine("Good!");
+                    break;
+                case 'D':
+                case 'd':   
+                    Console.WriteLine("Pass!");
+                    break;
+                case 'F':
+                case 'f':
+                    Console.WriteLine("Fail!");
+                    break;
+                default: Console.WriteLine("Invalid grade.");
+                    break;
+
             }
+            
         }
+    }
 }
-}
+
+
