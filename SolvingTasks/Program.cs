@@ -333,8 +333,11 @@
                 Console.WriteLine("The triangle is scalene.");
             } */
 
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //ADVANCED (2 Tasks)
+
             //TASK 14: Write a C# program that takes user input for a product code (1: Headphone, 2: Keyboard, or 3: Mouse), the quantity of the product, and whether the user has a discount coupon. Calculate the total price based on the product code, quantity, and any applicable discounts. Display the final amount to the user.
-            Console.WriteLine("Enter a product code (1: Headphone, 2: Keyboard, or 3: Mouse): ");
+            /* Console.WriteLine("Enter a product code (1: Headphone, 2: Keyboard, or 3: Mouse): ");
             int productCode = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter the quantity: ");
@@ -383,7 +386,55 @@
             Console.WriteLine("Subtotal: " + subtotal + " OMR");
             Console.WriteLine("Discount: " + discount + " OMR");
             Console.WriteLine("Tax: " + tax + " OMR");
-            Console.WriteLine("Total: " + total + " OMR");
+            Console.WriteLine("Total: " + total + " OMR"); */
+
+            Console.WriteLine("Enter the program type (S: Science, A: Arts): ");
+            char programType = Convert.ToChar(Console.ReadLine().Trim().ToUpper());
+            Console.WriteLine("Enter the applicant's GPA (out of 4.0): ");
+            double gpa = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the entrance exam score (out of 100): ");
+            double examScore = double.Parse(Console.ReadLine());
+            Console.WriteLine("Do you have an extracurricular achievement? (yes/no): ");
+            string extracurricularAnswer = Console.ReadLine().Trim().ToLower();
+            bool hasExtracurricular = extracurricularAnswer == "yes";
+
+            bool meetsRequirements;
+            string programName;
+
+            switch (programType)
+            {
+                case 'S':
+                    programName = "Science";
+                    meetsRequirements = (gpa >= 3.0 && examScore >= 75);
+                    break;
+                case 'A':
+                    programName = "Arts";
+                    meetsRequirements = (gpa >= 2.5 && examScore >= 60);
+                    break;
+                default:
+                    Console.WriteLine("Invalid program type.");
+                    return;
+            }
+
+            string result;
+            if (meetsRequirements)
+            {
+                result = "Admitted";
+            }
+            else if (hasExtracurricular)
+            {
+                result = "Conditionally Admitted";
+            }
+            else
+            {
+                result = "Not Admitted";
+            }
+
+            Console.WriteLine("Program: " + programName);
+            Console.WriteLine("Result: " + result);
+
+
+
         }
 
     }
