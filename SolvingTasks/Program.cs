@@ -2,8 +2,8 @@
 {
     internal class Program
     {
-        static void Main(string[] args) 
-        
+        static void Main(string[] args)
+
         {
             //EASY (5 Tasks)
             // TASK 1: Write a C# program that takes user input for their name, age, height, and whether they are a student or not. Then, display the information back to the user in a formatted string.
@@ -269,7 +269,7 @@
             } */
 
             // TASK 12: Write a C# program that takes user input for a region code (A, B, or C) and the weight of a package in kilograms. Based on the region code and weight, calculate the shipping cost using the following criteria.
-            Console.WriteLine("Enter a region code (A: Local, B: Regional, C: International): ");
+            /*Console.WriteLine("Enter a region code (A: Local, B: Regional, C: International): ");
             string regionCode = Console.ReadLine().Trim().ToUpper();
             Console.WriteLine("Enter the package weight in kilograms: ");
             double weight = double.Parse(Console.ReadLine());
@@ -311,9 +311,29 @@
                 Console.WriteLine("Base cost: " + shippingCost + " OMR");
                 Console.WriteLine("Extra cost: " + extraCost + " OMR");
                 Console.WriteLine("Total shipping cost: " + totalCost + " OMR");
+            } */
+
+            // TASK 13: Write a C# program that takes user input for the lengths of the three sides of a triangle. Determine the type of triangle (equilateral, isosceles, or scalene) based on the side lengths and display the result to the user.
+            Console.WriteLine("Enter the first side of the triangle: ");
+            double side1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second side of the triangle: ");
+            double side2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the third side of the triangle: ");
+            double side3 = double.Parse(Console.ReadLine());
+            if (side1 == side2 && side2 > side3 || side1 == side3 && side1 > side2 || side2 == side3 && side2 > side1)
+            {
+                Console.WriteLine("The triangle is isosceles.");
+            }
+            else if (side1 == side2 && side2 == side3)
+            {
+                Console.WriteLine("The triangle is equilateral.");
+            }
+            else
+            {
+                Console.WriteLine("The triangle is scalene.");
             }
 
-}
+        }
 }
 }
 
