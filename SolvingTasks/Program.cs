@@ -2,8 +2,11 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
+        
         {
+            //EASY (5 Tasks)
+            // TASK 1: Write a C# program that takes user input for their name, age, height, and whether they are a student or not. Then, display the information back to the user in a formatted string.
             /* Console.WriteLine("Enter your name:");
             string userName = Console.ReadLine();
             Console.WriteLine("Enter your age:");
@@ -15,6 +18,7 @@
             Console.WriteLine($"Name: {userName}, Age: {userAge}, " +
                 $"Height: {userHeight}, Student: {isStudent}"); */
 
+            // TASK 2: Write a C# program that takes user input for two numbers and performs basic arithmetic operations (addition, subtraction, multiplication, division) on them. Display the results to the user.
             /*Console.WriteLine("Enter the length: ");
             double length = double.Parse(Console.ReadLine());
             Console.WriteLine("Enter the width: ");
@@ -26,7 +30,8 @@
             Console.WriteLine("Area: " + area);
             Console.WriteLine("Perimeter: " + perimeter); */
 
-            /* Console.WriteLine("Enter the a number: ");
+            // TASK 3: Write a C# program that takes user input for a number and checks if it is even or odd. Display an appropriate message based on the result.
+            /* Console.WriteLine("Enter the a number: "); 
             int number = int.Parse(Console.ReadLine());
             if (number % 2 == 0)
             {
@@ -37,6 +42,7 @@
                 Console.WriteLine("The number is odd.");
             } */
 
+            // TASK 4: Write a C# program that takes user input for their age and checks if they are eligible to vote (age >= 18). Display an appropriate message based on the eligibility.
             /* Console.WriteLine("Enter your age: ");
             int age = int.Parse(Console.ReadLine());
             Console.WriteLine("Do you have a vaild national ID? (yes/no): ");
@@ -50,7 +56,8 @@
                 Console.WriteLine("You are not eligible to vote.");
             } */
 
-            Console.WriteLine("Enter your grade: ");
+            // TASK 5: Write a C# program that takes user input to check the grade of a student based on their score. Use a switch statement to display the corresponding grade (A, B, C, D, F) and a message indicating whether the student passed or failed.
+            /* Console.WriteLine("Enter your grade: ");
             char grade = char.Parse(Console.ReadLine());
             switch (grade) {
                 case 'A':
@@ -76,10 +83,37 @@
                 default: Console.WriteLine("Invalid grade.");
                     break;
 
-            }
+            } */
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             
+            // MEDIUM (5 Tasks)
+
+            Console.WriteLine("Enter a temperature in Celsius: ");
+            int celsius = int.Parse(Console.ReadLine());
+            int fahrenheit = (celsius * 9 / 5) + 32;
+            Console.WriteLine("Temperature in Fahrenheit: " + fahrenheit);
+            switch (celsius)
+            {
+                case int n when (n < 10):
+                    Console.WriteLine("The temperature is COLD");
+                    break;
+                case int n when (n >= 10 && n <= 30):
+                    Console.WriteLine("The temperature is Mild");
+                    break;
+                case int n when (n > 30):
+                    Console.WriteLine("The temperature is HOT");
+                    break;
+                default:
+                    Console.WriteLine("Invalid temperature.");
+                    break; 
+            } 
+
+            
+
+
         }
-    }
+}
 }
 
 
