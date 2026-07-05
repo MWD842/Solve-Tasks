@@ -110,7 +110,7 @@
             } */
 
             // TASK 7: Write a C# program that takes user input for age and determines the ticket category and price based on the following criteria.
-            Console.WriteLine("Enter the age: ");
+            /* Console.WriteLine("Enter the age: ");
             int age = int.Parse(Console.ReadLine());
             if (age >= 0 && age <= 12)
             {
@@ -128,6 +128,25 @@
             {
                 Console.WriteLine("Invalid age.");
 
+            } */
+
+            //TASK 8: Write a C# program that takes user input for the total bill amount and checks if the user is eligible for a discount based on their membership status. If the user is a member and the total bill amount is greater than $20, apply a 15% discount and display the final amount. Otherwise, display the total bill amount without any discount.
+            Console.WriteLine("Enter the total bill amount: ");
+            double totalBill = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Are you a member of the loyalty program? (yes/no): ");
+            string isMember = Console.ReadLine();
+            if (isMember == "yes" && totalBill > 20)
+            {
+                double discount = totalBill * 0.15;
+                double finalAmount = totalBill - discount;
+                Console.WriteLine("Total bill amount: " + totalBill);
+                Console.WriteLine("You are eligible for a 15% discount.");
+                Console.WriteLine("Final amount after discount: " + finalAmount);
+            }
+            else
+            {
+                Console.WriteLine("You are not eligible for a discount.");
+                Console.WriteLine("Total bill amount: " + totalBill);
             }
 }
 }
