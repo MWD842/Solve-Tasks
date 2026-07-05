@@ -388,6 +388,7 @@
             Console.WriteLine("Tax: " + tax + " OMR");
             Console.WriteLine("Total: " + total + " OMR"); */
 
+            //TASK 15: Write a C# program that takes user input for the applicant's program type (Science or Arts), GPA, entrance exam score, and whether they have an extracurricular achievement. Based on the following criteria, determine if the applicant is admitted, conditionally admitted, or not admitted.
             Console.WriteLine("Enter the program type (S: Science, A: Arts): ");
             char programType = Convert.ToChar(Console.ReadLine().Trim().ToUpper());
             Console.WriteLine("Enter the applicant's GPA (out of 4.0): ");
