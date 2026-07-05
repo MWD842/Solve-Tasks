@@ -131,7 +131,7 @@
             } */
 
             //TASK 8: Write a C# program that takes user input for the total bill amount and checks if the user is eligible for a discount based on their membership status. If the user is a member and the total bill amount is greater than $20, apply a 15% discount and display the final amount. Otherwise, display the total bill amount without any discount.
-            Console.WriteLine("Enter the total bill amount: ");
+            /* Console.WriteLine("Enter the total bill amount: ");
             double totalBill = double.Parse(Console.ReadLine());
             Console.WriteLine(" Are you a member of the loyalty program? (yes/no): ");
             string isMember = Console.ReadLine();
@@ -147,8 +147,39 @@
             {
                 Console.WriteLine("You are not eligible for a discount.");
                 Console.WriteLine("Total bill amount: " + totalBill);
+            } */
+
+            // TASK 9: Write a C# program that takes user input for a number from 1 to 7 and displays the corresponding day of the week (e.g., 1 = Sunday, 2 = Monday, etc.). Use a switch statement to determine the day based on the input.
+            Console.WriteLine("Enter a number from 1 to 7 to check the day of the week: ");
+            int dayNumber = int.Parse(Console.ReadLine());
+            switch(dayNumber)
+            {
+                case 1:
+                    Console.WriteLine("The day is Sunday.");
+                    break;
+                case 2:
+                    Console.WriteLine("The day is Monday.");
+                    break;
+                case 3:
+                    Console.WriteLine("The day is Tuesday.");
+                    break;
+                case 4:
+                    Console.WriteLine("The day is Wednesday.");
+                    break;
+                case 5:
+                    Console.WriteLine("The day is Thursday.");
+                    break;
+                case 6:
+                    Console.WriteLine("The day is Friday.");
+                    break;
+                case 7:
+                    Console.WriteLine("The day is Saturday.");
+                    break;
+                default:
+                    Console.WriteLine("Invalid day number.");
+                    break;
             }
-}
+        }
 }
 }
 
