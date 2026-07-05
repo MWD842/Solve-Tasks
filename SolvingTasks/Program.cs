@@ -236,7 +236,7 @@
             //HARD (3 Tasks)
 
             //TASK 11: Write a C# program that takes user input for their age, monthly income, and whether they have an existing loan. Based on the following criteria, determine if the user is eligible for a loan.
-            Console.WriteLine("Enter your age: ");
+            /* Console.WriteLine("Enter your age: ");
             int age = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter your monthly income: ");
             double income = double.Parse(Console.ReadLine());
@@ -266,10 +266,55 @@
                 {
                     Console.WriteLine("- " + reason);
                 }
+            } */
+
+            // TASK 12: Write a C# program that takes user input for a region code (A, B, or C) and the weight of a package in kilograms. Based on the region code and weight, calculate the shipping cost using the following criteria.
+            Console.WriteLine("Enter a region code (A: Local, B: Regional, C: International): ");
+            string regionCode = Console.ReadLine().Trim().ToUpper();
+            Console.WriteLine("Enter the package weight in kilograms: ");
+            double weight = double.Parse(Console.ReadLine());
+            double shippingCost = 0;
+            bool isValidRegion = true;
+            switch (regionCode)
+            {
+                case "A":
+                    shippingCost = 1.000; 
+                    break;
+                case "B":
+                    shippingCost = 3.000;
+                    break;
+                case "C":
+                    shippingCost = 7.000;
+                    break;
+                default:
+                    Console.WriteLine("Invalid region code.");
+                    isValidRegion = false;
+                    break;
             }
-        
-        }
-    }
+            if (isValidRegion)
+            {
+                double extraCost = 0;
+
+                if (weight > 10)
+                {
+                    extraCost = 5.000;
+                }
+                else if (weight > 5 && weight < 10)
+                {
+                    extraCost = 2.000;
+                }
+                else
+                {
+                    extraCost = 0;
+                }
+                double totalCost = shippingCost + extraCost;
+                Console.WriteLine("Base cost: " + shippingCost + " OMR");
+                Console.WriteLine("Extra cost: " + extraCost + " OMR");
+                Console.WriteLine("Total shipping cost: " + totalCost + " OMR");
+            }
+
+}
+}
 }
 
 
