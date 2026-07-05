@@ -181,7 +181,7 @@
             } */
 
             // TASK 10: Write a C# program that takes user input for two numbers and an operation (addition, subtraction, multiplication, division, modulus). Perform the specified operation on the numbers and display the result to the user.
-            Console.WriteLine("Enter the first number: ");
+            /* Console.WriteLine("Enter the first number: ");
             int firstNumber = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the second number: ");
             int secondNumber = int.Parse(Console.ReadLine());
@@ -229,11 +229,48 @@
             else
             {
                 Console.WriteLine("Invalid operation.");
+            } */
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //HARD (3 Tasks)
+
+            //TASK 11: Write a C# program that takes user input for their age, monthly income, and whether they have an existing loan. Based on the following criteria, determine if the user is eligible for a loan.
+            Console.WriteLine("Enter your age: ");
+            int age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your monthly income: ");
+            double income = double.Parse(Console.ReadLine());
+            Console.WriteLine("Do you have an existing loan (yes/no): ");
+            string hasExistingLoan = Console.ReadLine().Trim().ToLower();
+
+            List<string> reasons = new List<string>();
+
+            if (age < 21 || age > 60)
+                reasons.Add("age restrictions");
+
+            if (income < 400)
+                reasons.Add("insufficient income");
+
+            if (hasExistingLoan == "yes")
+                reasons.Add("existing loan");
+
+            if (reasons.Count == 0)
+            {
+                Console.WriteLine("You are eligible for a loan.");
             }
-
-
+            else
+            {
+                Console.WriteLine("You are not eligible for a loan.");
+                Console.WriteLine("Reasons for ineligibility:");
+                foreach (string reason in reasons)
+                {
+                    Console.WriteLine("- " + reason);
+                }
+            }
+        
         }
+    }
 }
-}
+
 
 
