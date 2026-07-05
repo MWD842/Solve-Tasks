@@ -150,7 +150,7 @@
             } */
 
             // TASK 9: Write a C# program that takes user input for a number from 1 to 7 and displays the corresponding day of the week (e.g., 1 = Sunday, 2 = Monday, etc.). Use a switch statement to determine the day based on the input.
-            Console.WriteLine("Enter a number from 1 to 7 to check the day of the week: ");
+            /*Console.WriteLine("Enter a number from 1 to 7 to check the day of the week: ");
             int dayNumber = int.Parse(Console.ReadLine());
             switch(dayNumber)
             {
@@ -178,7 +178,60 @@
                 default:
                     Console.WriteLine("Invalid day number.");
                     break;
+            } */
+
+            // TASK 10: Write a C# program that takes user input for two numbers and an operation (addition, subtraction, multiplication, division, modulus). Perform the specified operation on the numbers and display the result to the user.
+            Console.WriteLine("Enter the first number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the operation (Addition, Subtraction, Multiplication, Division, Modulus): ");
+            string operation = Console.ReadLine();
+            if (operation == "Addition")
+            {
+                int result = firstNumber + secondNumber;
+                Console.WriteLine("Result: " + result);
             }
+            else if (operation == "Subtraction ")
+            {
+                int result = firstNumber - secondNumber;
+                Console.WriteLine("Result: " + result);
+            }
+            else if (operation == "Multiplication")
+            {
+                int result = firstNumber * secondNumber;
+                Console.WriteLine("Result: " + result);
+            }
+            else if (operation == "Division")
+            {
+                if (secondNumber != 0)
+                {
+                    double result = (double)firstNumber / secondNumber;
+                    Console.WriteLine("Result: " + result);
+                }
+                else
+                {
+                    Console.WriteLine("Error: Division by zero is not allowed.");
+                }
+            }
+            else if (operation == "Modulus")
+            {
+                if (secondNumber != 0)
+                {
+                    int result = firstNumber % secondNumber;
+                    Console.WriteLine("Result: " + result);
+                }
+                else
+                {
+                    Console.WriteLine("Error: Division by zero is not allowed.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid operation.");
+            }
+
+
         }
 }
 }
