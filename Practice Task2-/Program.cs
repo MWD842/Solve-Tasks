@@ -58,24 +58,47 @@
             //}
 
             /////////
-            
+
             //Task 5: Write a program that generates a number and prompts the user to guess the number. The program should give hints if the guess is too high or too low, and continue until the user guesses the correct number.
-            Console.WriteLine("Guess the number: ");  
-            int secretNumber = 30;
-            int guess;
-            do
+            //Console.WriteLine("Guess the number: ");  
+            //int secretNumber = 30; //int secretNumber = new Random().Next(1, 101); // Generates a random number between 1 and 100
+            //int guess;
+            //do
+            //{
+            //    guess = int.Parse(Console.ReadLine());
+            //    if (guess < secretNumber)
+            //    {
+            //        Console.WriteLine("Too low! Try again.");
+            //    }
+            //    else if (guess > secretNumber)
+            //    {
+            //        Console.WriteLine("Too high! Try again.");
+            //    }
+            //} while (guess != secretNumber);
+            //Console.WriteLine("Congratulations! You guessed the number.");
+
+            ////////
+
+            //Task 6: Write a program that takes two numbers as input and divides the first number by the second number. The program should handle any exceptions that may occur, such as dividing by zero or invalid input.
+            Console.WriteLine("Enter the first number: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second number: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+            int DivideNumbers = firstNumber / secondNumber;
+            try
             {
-                guess = int.Parse(Console.ReadLine());
-                if (guess < secretNumber)
-                {
-                    Console.WriteLine("Too low! Try again.");
-                }
-                else if (guess > secretNumber)
-                {
-                    Console.WriteLine("Too high! Try again.");
-                }
-            } while (guess != secretNumber);
-            Console.WriteLine("Congratulations! You guessed the number.");
+                Console.WriteLine("The result of dividing {0} by {1} is: {2}", firstNumber, secondNumber, DivideNumbers);
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine("Error: {0}", "Cannot divide by zero.");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Error: Invalid input format.");
+            }
+
+
         }
     }
 }
