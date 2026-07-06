@@ -41,21 +41,41 @@
             /////////
 
             //Task 4: Write a program that prompts the user to enter a password. If the password is correct, print "Access Granted". If the password is incorrect, print "Access Denied" and prompt the user to enter the password again until the correct password is entered.
-            bool isCorrectPassword = false;
-            while (isCorrectPassword == false)
+            //bool isCorrectPassword = false;
+            //while (isCorrectPassword == false)
+            //{
+            //    Console.WriteLine("Enter password: ");
+            //    string password = Console.ReadLine();
+            //    if (password == "Spark2026")
+            //    {
+            //        isCorrectPassword = true;
+            //        Console.WriteLine("Access Granted");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Incorrect password. Please try again.");
+            //    }
+            //}
+
+            /////////
+            
+            //Task 5: Write a program that generates a number and prompts the user to guess the number. The program should give hints if the guess is too high or too low, and continue until the user guesses the correct number.
+            Console.WriteLine("Guess the number: ");  
+            int secretNumber = 30;
+            int guess;
+            do
             {
-                Console.WriteLine("Enter password: ");
-                string password = Console.ReadLine();
-                if (password == "Spark2026")
+                guess = int.Parse(Console.ReadLine());
+                if (guess < secretNumber)
                 {
-                    isCorrectPassword = true;
-                    Console.WriteLine("Access Granted");
+                    Console.WriteLine("Too low! Try again.");
                 }
-                else
+                else if (guess > secretNumber)
                 {
-                    Console.WriteLine("Incorrect password. Please try again.");
+                    Console.WriteLine("Too high! Try again.");
                 }
-            }
+            } while (guess != secretNumber);
+            Console.WriteLine("Congratulations! You guessed the number.");
         }
     }
 }
