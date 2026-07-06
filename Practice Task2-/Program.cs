@@ -80,25 +80,40 @@
             ////////
 
             //Task 6: Write a program that takes two numbers as input and divides the first number by the second number. The program should handle any exceptions that may occur, such as dividing by zero or invalid input.
-            Console.WriteLine("Enter the first number: ");
-            int firstNumber = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the second number: ");
-            int secondNumber = int.Parse(Console.ReadLine());
-            int DivideNumbers = firstNumber / secondNumber;
-            try
-            {
-                Console.WriteLine("The result of dividing {0} by {1} is: {2}", firstNumber, secondNumber, DivideNumbers);
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine("Error: {0}", "Cannot divide by zero.");
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Error: Invalid input format.");
-            }
+            //Console.WriteLine("Enter the first number: ");
+            //int firstNumber = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the second number: ");
+            //int secondNumber = int.Parse(Console.ReadLine());
+            //int DivideNumbers = firstNumber / secondNumber;
+            //try
+            //{
+            //    Console.WriteLine("The result of dividing {0} by {1} is: {2}", firstNumber, secondNumber, DivideNumbers);
+            //}
+            //catch (DivideByZeroException ex)
+            //{
+            //    Console.WriteLine("Error: {0}", "Cannot divide by zero.");
+            //}
+            //catch (FormatException ex)
+            //{
+            //    Console.WriteLine("Error: Invalid input format.");
+            //}
 
-
+            /////////
+            
+            //Task 7: Write a program that takes two names as input and checks if they are matching. The program should ignore case and whitespace when comparing the names.
+            Console.WriteLine("Enter your name: ");
+            string name1 = Console.ReadLine().ToUpper().Trim();
+            Console.WriteLine("Enter your name: ");
+            string name2 = Console.ReadLine().ToUpper().Trim();
+            if (name1.Equals(name2))
+            {
+                Console.WriteLine("The names are matching.");
+            }
+            else
+            {
+                Console.WriteLine("The names are not matching.");
+            }
         }
     }
 }
+
