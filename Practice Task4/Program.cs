@@ -92,6 +92,14 @@ namespace Practice_Task4
             }
         }
 
+        public static void Countdown(int start)
+        {
+            for (int i = start; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
 
         static void Main(string[] args)
         {
@@ -143,12 +151,17 @@ namespace Practice_Task4
             //Console.WriteLine($"Perimeter: {perimeter}");
 
             // TASK 7
-            Console.Write("Enter a score: ");
-            int score = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a score: ");
+            //int score = int.Parse(Console.ReadLine());
 
-            string grade = GetGradeLetter(score);
-            Console.WriteLine($"Grade: {grade}");
+            //string grade = GetGradeLetter(score);
+            //Console.WriteLine($"Grade: {grade}");
 
+            // TASK 8
+            Console.Write("Enter a starting number: ");
+            int start = int.Parse(Console.ReadLine());
+
+            Countdown(start);
         }
     }
 }
