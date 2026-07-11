@@ -8,12 +8,27 @@
             Console.WriteLine($"Welcome to Spark to Code, {userName}");
         }
 
-        static void Main(string[] args)
+        public static int Square(int number)
         {
-            Console.WriteLine("Enter your name: ");
-            string userName = Console.ReadLine();
+            int result = number * number;
+            return result;
+        }
 
-            PrintWelcome(userName);
+        static void Main(string[] args)
+        {   
+            // TASK 1
+            //Console.WriteLine("Enter your name: ");
+            //string userName = Console.ReadLine();
+
+            //PrintWelcome(userName);
+
+
+            // TASK 2
+            Console.WriteLine("Enter a number to square: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            
+            int squaredNumber = Square(number);
+            Console.WriteLine("The square of " + number + " is: " + squaredNumber);
         }
     }
 }
