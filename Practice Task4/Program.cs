@@ -53,6 +53,12 @@ namespace Practice_Task4
             } while (true);
         }
 
+        public static bool IsEven(int num)
+        {
+            return num % 2 == 0;
+        }
+
+
         static void Main(string[] args)
         {
             // TASK 1
@@ -60,7 +66,6 @@ namespace Practice_Task4
             //string userName = Console.ReadLine();
 
             //PrintWelcome(userName);
-
 
             // TASK 2
             //Console.WriteLine("Enter a number to square: ");
@@ -75,8 +80,20 @@ namespace Practice_Task4
             //Console.WriteLine("The temperature in Fahrenheit is: " + CelsiusToFahrenheit(C));
 
             // TASK 4
-            DisplayMenu();
+            //DisplayMenu();
 
+            // TASK 5
+            Console.WriteLine("Enter a number: ");
+            int num = int.Parse(Console.ReadLine());
+
+            if (IsEven(num))
+            {
+                Console.WriteLine("The number is even");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd");
+            }
         }
     }
 }
