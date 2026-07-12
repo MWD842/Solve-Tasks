@@ -41,20 +41,36 @@
             //}
 
             // Task 3
-            Stack<string> history = new Stack<string>();
+            //Stack<string> history = new Stack<string>();
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.Write($"Enter website {i + 1}: ");
+            //    string url = Console.ReadLine();
+            //    history.Push(url);
+            //}
+
+            //Console.WriteLine($"\nCurrent page: {history.Peek()}");
+
+            //string leftPage = history.Pop();
+            //Console.WriteLine($"Pressing back... leaving {leftPage}");
+            //Console.WriteLine($"You land on: {history.Peek()}");
+
+            // Task 4
+            Queue<string> customers = new Queue<string>();
 
             for (int i = 0; i < 3; i++)
             {
-                Console.Write($"Enter website {i + 1}: ");
-                string url = Console.ReadLine();
-                history.Push(url);
+                Console.Write($"Enter customer {i + 1}: ");
+                string name = Console.ReadLine();
+                customers.Enqueue(name);
             }
 
-            Console.WriteLine($"\nCurrent page: {history.Peek()}");
+            Console.WriteLine($"\nNext in line: {customers.Peek()}");
 
-            string leftPage = history.Pop();
-            Console.WriteLine($"Pressing back... leaving {leftPage}");
-            Console.WriteLine($"You land on: {history.Peek()}");
+            string served = customers.Dequeue();
+            Console.WriteLine($"Now serving: {served}");
+            Console.WriteLine($"Customers still waiting: {customers.Count}");
 
         }
     }
