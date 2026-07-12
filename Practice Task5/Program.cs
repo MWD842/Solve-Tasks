@@ -96,47 +96,110 @@
             //Console.WriteLine($"Average grade: {average}");
 
             // Task 6
-            List<string> shopping = new List<string>();
+            //List<string> shopping = new List<string>();
+            //string input = "";
+
+            //Console.WriteLine("Enter shopping items. Type 'done' to finish.");
+
+            //while (input.ToLower() != "done")
+            //{
+            //    Console.Write("Item: ");
+            //    input = Console.ReadLine();
+
+            //    if (input.ToLower() != "done")
+            //    {
+            //        shopping.Add(input);
+            //    }
+            //}
+
+            //Console.WriteLine("\nList before removal:");
+            //foreach (string item in shopping)
+            //{
+            //    Console.WriteLine($"- {item}");
+            //}
+
+            //Console.Write("\nWhich item do you want to remove? ");
+            //string toRemove = Console.ReadLine();
+            //bool removed = shopping.Remove(toRemove);
+
+            //if (removed)
+            //{
+            //    Console.WriteLine($"Removed: {toRemove}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"'{toRemove}' was not found in the list.");
+            //}
+
+            //Console.WriteLine("\nList after removal:");
+            //foreach (string item in shopping)
+            //{
+            //    Console.WriteLine($"- {item}");
+            //}
+
+            // Task 7
+            //List<int> scores = new List<int>();
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write($"Enter score {i + 1}: ");
+            //    int score = int.Parse(Console.ReadLine());
+            //    scores.Add(score);
+            //}
+
+            //scores.Sort();
+            //scores.Reverse();
+
+            //Console.WriteLine("\n=== PODIUM ===");
+            //Console.WriteLine($"1st place: {scores[0]}");
+            //Console.WriteLine($"2nd place: {scores[1]}");
+            //Console.WriteLine($"3rd place: {scores[2]}");
+
+            // Task 8
+            Stack<string> actions = new Stack<string>();
             string input = "";
 
-            Console.WriteLine("Enter shopping items. Type 'done' to finish.");
+            Console.WriteLine("Enter your actions. Type 'stop' to finish.");
 
-            while (input.ToLower() != "done")
+            while (input.ToLower() != "stop")
             {
-                Console.Write("Item: ");
+                Console.Write("Action: ");
                 input = Console.ReadLine();
 
-                if (input.ToLower() != "done")
+                if (input.ToLower() != "stop")
                 {
-                    shopping.Add(input);
+                    actions.Push(input);
                 }
             }
 
-            Console.WriteLine("\nList before removal:");
-            foreach (string item in shopping)
+            Console.WriteLine("\n=== UNDO ===");
+
+            for (int i = 1; i <= 2; i++)
             {
-                Console.WriteLine($"- {item}");
+                if (actions.Count > 0)
+                {
+                    string undone = actions.Pop();
+                    Console.WriteLine($"Undo {i}: {undone}");
+                }
+                else
+                {
+                    Console.WriteLine($"Undo {i}: nothing left to undo.");
+                }
             }
 
-            Console.Write("\nWhich item do you want to remove? ");
-            string toRemove = Console.ReadLine();
-            bool removed = shopping.Remove(toRemove);
-
-            if (removed)
+            Console.WriteLine("\nRemaining actions on the stack:");
+            if (actions.Count == 0)
             {
-                Console.WriteLine($"Removed: {toRemove}");
+                Console.WriteLine("(empty)");
             }
             else
             {
-                Console.WriteLine($"'{toRemove}' was not found in the list.");
-            }
+                foreach (string action in actions)
+                {
+                    Console.WriteLine($"- {action}");
+                }
 
-            Console.WriteLine("\nList after removal:");
-            foreach (string item in shopping)
-            {
-                Console.WriteLine($"- {item}");
             }
-
         }
     }
 }
