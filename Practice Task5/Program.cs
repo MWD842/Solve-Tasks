@@ -57,20 +57,43 @@
             //Console.WriteLine($"You land on: {history.Peek()}");
 
             // Task 4
-            Queue<string> customers = new Queue<string>();
+            //Queue<string> customers = new Queue<string>();
 
-            for (int i = 0; i < 3; i++)
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.Write($"Enter customer {i + 1}: ");
+            //    string name = Console.ReadLine();
+            //    customers.Enqueue(name);
+            //}
+
+            //Console.WriteLine($"\nNext in line: {customers.Peek()}");
+
+            //string served = customers.Dequeue();
+            //Console.WriteLine($"Now serving: {served}");
+            //Console.WriteLine($"Customers still waiting: {customers.Count}");
+
+            // Task 5
+            int[] grades = new int[5];
+
+            for (int i = 0; i < grades.Length; i++)
             {
-                Console.Write($"Enter customer {i + 1}: ");
-                string name = Console.ReadLine();
-                customers.Enqueue(name);
+                Console.Write($"Enter grade {i + 1}: ");
+                grades[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine($"\nNext in line: {customers.Peek()}");
+            Array.Sort(grades);
 
-            string served = customers.Dequeue();
-            Console.WriteLine($"Now serving: {served}");
-            Console.WriteLine($"Customers still waiting: {customers.Count}");
+            int sum = 0;
+            for (int i = 0; i < grades.Length; i++)
+            {
+                sum += grades[i];
+            }
+
+            double average = (double)sum / grades.Length;
+
+            Console.WriteLine($"\nLowest grade:  {grades[0]}");
+            Console.WriteLine($"Highest grade: {grades[grades.Length - 1]}");
+            Console.WriteLine($"Average grade: {average}");
 
         }
     }
